@@ -14,9 +14,9 @@ enum StatusType {
     
     var title: String {
         switch self {
-        case.intro: return "주문하신 상품의 계정으로 로그인하시면\n배송 정보를 실시간으로 볼 수 있어요."
-        case.process: return "로그인 중입니다.."
-        case.success: return "로그인 성공!"
+        case.intro: return "로그인 정보입니다.\n로그인 정보입니다."
+        case.process: return "로그인 진행중"
+        case.success: return "로그인 완료"
         }
     }
     

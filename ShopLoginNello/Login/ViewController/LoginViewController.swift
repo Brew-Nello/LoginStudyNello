@@ -39,7 +39,7 @@ final class LoginViewController: UIViewController {
         // 타이틀
         self.navigationItem.titleView = {
             let label = UILabel()
-            label.text = "로그인(꽃피는시절)"
+            label.text = "로그인"
             label.textColor = .black
             label.font = .systemFont(ofSize: 16, weight: .bold)
             return label

@@ -25,7 +25,7 @@ final class LoginView: UIView {
     private let mainImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "login")!
+        imageView.image = UIImage(systemName: "heart.fill")!
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -44,7 +44,7 @@ final class LoginView: UIView {
     let infoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "꽃피는시절 비회원 주문 및 SNS 계정(페이스북/네이버 등)으로 로그인하여 주문하신 경우, '주문 페이지 바로가기'를 이용해주세요."
+        label.text = "정보 텍스트 정보 텍스트 정보 텍스트 정보 텍스트 정보 텍스트 정보 텍스트 정보 텍스트 정보 텍스트 정보 텍스트 "
         label.textColor = .gray
         label.font = .systemFont(ofSize: 14, weight: .medium)
         label.textAlignment = .center
@@ -64,7 +64,7 @@ final class LoginView: UIView {
     let idTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "꽃피는 시절 아이디"
+        textField.placeholder = "아이디"
         return textField
     }()
     
@@ -78,7 +78,7 @@ final class LoginView: UIView {
     let passwordIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "password_icon")!
+        imageView.image = UIImage(systemName: "lock")!
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -101,10 +101,10 @@ final class LoginView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        let text = "자동 로그인 약관에 동의"
+        let text = "자동 로그인 하기"
         let textColor = Colors.primary_color
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(.foregroundColor, value: textColor, range: (text as NSString).range(of: "자동 로그인 약관"))
+        attributedString.addAttribute(.foregroundColor, value: textColor, range: (text as NSString).range(of: "자동 로그인"))
         attributedString.addAttribute(.font, value: font, range: (text as NSString).range(of: text))
         label.attributedText = attributedString
         return label
@@ -112,8 +112,8 @@ final class LoginView: UIView {
     var termInfoLabelHeightConstraint: NSLayoutConstraint?
     
     lazy var termCheckButton: UIButton = {
-        let checked_normal = UIImage(named: "checked_normal")!
-        let unchecked_normal = UIImage(named: "unchecked_normal")!
+        let checked_normal = UIImage(systemName: "checkmark.circle.fill")!
+        let unchecked_normal = UIImage(systemName: "checkmark.circle")!
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(unchecked_normal, for: .normal)
@@ -136,7 +136,7 @@ final class LoginView: UIView {
     let findIdPasswordButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("아이디&비밀번호 찾기", for: .normal)
+        button.setTitle("아이디 비밀번호 찾기", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         return button
@@ -145,7 +145,7 @@ final class LoginView: UIView {
     let autoLoginTermButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("자동 로그인 연결 약관", for: .normal)
+        button.setTitle("자동 로그인 확인", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
         button.backgroundColor = Colors.disable_color
